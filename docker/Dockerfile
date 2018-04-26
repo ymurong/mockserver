@@ -12,7 +12,7 @@ FROM openjdk:alpine
 MAINTAINER James Bloom "jamesdbloom@gmail.com"
 
 # obtain MockServer jar and script
-RUN apk add --update openssl ca-certificates bash wget
+RUN apk add --update openssl ca-certificates bash wget curl
 ADD run_mockserver.sh /opt/mockserver/run_mockserver.sh
 ARG VERSION=5.3.0
 ARG RESPOSITORY_URL=https://oss.sonatype.org/content/repositories/releases/org/mock-server/mockserver-netty/$VERSION/mockserver-netty-$VERSION-jar-with-dependencies.jar
